@@ -1,3 +1,59 @@
-<html>
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        #animation-container {
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>About Me</h1>
+    <p>Welcome to my personal website! I'm passionate about...</p>
+    <div id="animation-container">
+        <p>...web development, design, and creating amazing user experiences.</p>
+    </div>
+</div>
+
+<script>
+    // Add animation when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        var animationContainer = document.getElementById('animation-container');
+        animationContainer.style.opacity = '1';
+        animationContainer.style.transform = 'translateY(0)';
+    });
+</script>
+
+</body>
 </html>
